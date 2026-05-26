@@ -1,0 +1,79 @@
+:root {
+    --black: #000000;
+    --dark-blue: #0A192F;
+    --blue: #1E3A8A;
+    --white: #FFFFFF;
+}
+
+/* Глобальні налаштування для мобільної версії */
+html, body {
+    overflow-x: hidden; /* Заборона горизонтального прокручування */
+    font-size: 16px; /* Гарантує шрифт, що добре читається (більше 12px) */
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg-dark-blue {
+    background-color: var(--dark-blue) !important;
+}
+
+.bg-dark-custom {
+    background-color: #111111 !important;
+}
+
+.bg-blue-custom {
+    background-color: var(--blue) !important;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(10, 25, 47, 0.7), rgba(0, 0, 0, 0.9)), 
+                url('https://images.unsplash.com/photo-1518605368461-1e1e12727d97?q=80&w=1920&auto=format&fit=crop') no-repeat center center;
+    background-size: cover;
+    min-height: 60vh;
+}
+
+.btn-outline-light:hover {
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+/* =========================================
+   Медіазапити для мобільної адаптації
+   ========================================= */
+
+/* Extra Small пристрої (до 576px) */
+@media screen and (max-width: 575.98px) {
+    /* Збільшення відстаней для зручного "тапання" в меню */
+    .navbar-nav .nav-link {
+        padding: 15px 10px !important; 
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 18px;
+    }
+
+    /* Адаптація кнопок під мобільні екрани (розтягування на всю ширину) */
+    .btn {
+        padding: 15px 20px; 
+        margin-bottom: 15px;
+        display: block;
+        width: 100%;
+    }
+
+    /* Зменшення головного заголовка, щоб не вилазив за екран */
+    .hero-section h1.display-4 {
+        font-size: 2.2rem;
+    }
+    
+    /* Додаткові відступи для карток на мобільному */
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Small пристрої та вище (від 576px) */
+@media screen and (min-width: 576px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
